@@ -1,0 +1,24 @@
+def tentukan_ukuran(lingkar_dada):
+    """Menentukan ukuran baju berdasarkan lingkar dada."""
+    if lingkar_dada < 80:
+        return "S (Small)"
+    elif 80 <= lingkar_dada < 100:
+        return "M (Medium)"
+    elif 100 <= lingkar_dada < 120:
+        return "L (Large)"
+    elif 120 <= lingkar_dada < 140:
+        return "XL (Extra Large)"
+    else:
+        return "XXL (Double Extra Large)"
+
+def main():
+    print("\n=== Menentukan Ukuran Baju ===")
+    try:
+        lingkar_dada = float(input("Masukkan lingkar dada (cm): "))
+        ukuran = tentukan_ukuran(lingkar_dada)
+        print(f"Ukuran baju Anda adalah: {ukuran}")
+    except ValueError:
+        print("Input tidak valid. Silakan masukkan angka.")
+
+if __name__ == "__main__":
+    main()
